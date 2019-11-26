@@ -1,0 +1,560 @@
+/*
+  Theme Name: Name - Multipurpose HTML Template
+  Author: mdsalim400@gmail.com
+  Support: admin@gmail.com
+  Description: Creative  HTML5 template.
+  Version: 1.0
+*/
+
+/* CSS Index
+-----------------------------------
+1. Theme default css
+2. header
+3. slider
+4. about-area
+5. features-box
+6. department
+7. team
+8. video-area
+9. counter
+10. footer
+*/
+
+
+
+/* 1. Theme default css */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Poppins:300,400,500,600,700');
+ body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+.img {
+	max-width: 100%;
+	transition: all 0.3s ease-out 0s;
+}
+.f-left {
+	float: left
+}
+.f-right {
+	float: right
+}
+.fix {
+	overflow: hidden
+}
+a,
+.button {
+	-webkit-transition: all 0.3s ease-out 0s;
+	-moz-transition: all 0.3s ease-out 0s;
+	-ms-transition: all 0.3s ease-out 0s;
+	-o-transition: all 0.3s ease-out 0s;
+	transition: all 0.3s ease-out 0s;
+}
+a:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+}
+a:focus,
+a:hover,
+.portfolio-cat a:hover,
+.footer -menu li a:hover {
+	color: #2B96CC;
+	text-decoration: none;
+}
+a,
+button {
+	color: #1696e7;
+	outline: medium none;
+}
+button:focus,input:focus,input:focus,textarea,textarea:focus{outline: 0}
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: normal;
+	color: #313131;
+	margin-top: 0px;
+	font-style: normal;
+	font-weight: 400;
+	text-transform: normal;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: inherit;
+}
+h1 {
+	font-size: 40px;
+	font-weight: 500;
+}
+h2 {
+	font-size: 35px;
+}
+h3 {
+	font-size: 28px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	list-style: none
+}
+p {
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 24px;
+	color: #7e7e7e;
+	margin-bottom: 15px;
+}
+hr {
+	border-bottom: 1px solid #eceff8;
+	border-top: 0 none;
+	margin: 30px 0;
+	padding: 0;
+}
+label {
+	color: #7e7e7e;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 400;
+}
+*::-moz-selection {
+	background: #d6b161;
+	color: #fff;
+	text-shadow: none;
+}
+::-moz-selection {
+	background: #444;
+	color: #fff;
+	text-shadow: none;
+}
+::selection {
+	background: #444;
+	color: #fff;
+	text-shadow: none;
+}
+*::-moz-placeholder {
+	color: #555555;
+	font-size: 14px;
+	opacity: 1;
+}
+*::placeholder {
+	color: #555555;
+	font-size: 14px;
+	opacity: 1;
+}
+.theme-overlay {
+	position: relative
+}
+.theme-overlay::before {
+	background: #1696e7 none repeat scroll 0 0;
+	content: "";
+	height: 100%;
+	left: 0;
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.separator {
+	border-top: 1px solid #f2f2f2
+}
+/* button style */
+
+.btn {
+	-moz-user-select: none;
+	background: #1696e7 none repeat scroll 0 0;
+	border: medium none;
+	border-radius: 2px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	line-height: 1;
+	margin-bottom: 0;
+	padding: 13px 25px;
+	text-align: center;
+	text-transform: uppercase;
+	touch-action: manipulation;
+	transition: all 0.3s ease 0s;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+.breadcrumb > .active {
+	color: #888;
+}
+.owl-carousel .owl-nav div {
+	background: rgba(255, 255, 255, 0.8) none repeat scroll 0 0;
+	height: 40px;
+	left: 20px;
+	line-height: 40px;
+	opacity: 0;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all 0.3s ease 0s;
+	visibility: hidden;
+	width: 40px;
+}
+.owl-carousel .owl-nav div.owl-next {
+	left: auto;
+	right: 20px;
+}
+.owl-carousel:hover .owl-nav div {
+	opacity: 1;
+	visibility: visible;
+}
+.owl-carousel .owl-nav div:hover {
+	background: #2B96CC;
+	color: #fff
+}
+
+/* scrollUp */
+#scrollUp {
+	background: #7DBA2F;
+	height: 35px;
+	width: 35px;
+	right: 50px;
+	bottom: 77px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 50%;
+	font-size: 20px;
+	line-height: 34px;
+}
+#scrollUp:hover {
+	background: #444;
+}
+
+/*============ Header Code CSS Part Start =============== */
+
+
+#f1_container {
+  position: relative;
+  margin: 10px auto;
+  width: 450px;
+  height: 281px;
+  z-index: 1;
+}
+#f1_container {
+  perspective: 1000;
+}
+#f1_card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+#f1_container:hover #f1_card {
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  background-color: #aaa;
+    background-image: url(../images/000106.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+/*2nd*/
+		.square-flip{
+		-webkit-perspective: 1000;
+		-moz-perspective: 1000;
+		-ms-perspective: 1000;
+		perspective: 1000;
+
+		-webkit-transform: perspective(1000px);
+		-moz-transform: perspective(1000px);
+		-ms-transform: perspective(1000px);
+		transform: perspective(1000px);
+
+		-webkit-transform-style: preserve-3d; 
+		-moz-transform-style: preserve-3d; 
+		-ms-transform-style: preserve-3d; 
+		transform-style: preserve-3d; 
+
+		/*border:1px solid #efefef;*/
+		
+		position:relative;
+		float:left;
+		margin:20px;
+
+		}
+		.square-flip{
+			width:400px;
+			height:400px;
+		}
+		.square,.square2{
+			width:100%;
+			height:100%;
+		}
+		.square{
+
+			background-size: cover;
+			background-position:center center;
+
+			-ms-transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+			    transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+			    -webkit-transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+			overflow: hidden;
+
+			position:absolute;
+			top:0;
+
+
+			-webkit-backface-visibility: hidden; 
+			backface-visibility: hidden;
+		}
+		.square-flip .square{
+			-webkit-transform: rotateY(0deg);
+			-moz-transform: rotateY(0deg);
+			-o-transform: rotateY(0deg);
+			-ms-transform: rotateY(0deg);
+			transform: rotateY(0deg);
+			transform-style: preserve-3d;
+			z-index:1;
+		}
+		.square-flip:hover .square{
+			-webkit-transform: rotateY(-180deg);
+			-moz-transform: rotateY(-180deg);
+			-o-transform: rotateY(-180deg);
+			-ms-transform: rotateY(-180deg);
+			transform: rotateY(-180deg);
+			transform-style: preserve-3d;
+		}
+
+
+		.square2{
+
+			background-size: cover;
+			background-position:center center;
+
+			-ms-transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+			    transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+			    -webkit-transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+			overflow: hidden;
+
+			position:absolute;
+			top:0;
+
+			-webkit-backface-visibility: hidden; 
+			backface-visibility: hidden;
+		}
+		.square-flip .square2{
+			-webkit-transform: rotateY(180deg);
+			-moz-transform: rotateY(180deg);
+			-o-transform: rotateY(180deg);
+			-ms-transform: rotateY(180deg);
+			transform: rotateY(180deg);
+			transform-style: preserve-3d;
+			z-index:1;
+		}
+		.square-flip:hover .square2{
+			-webkit-transform: rotateY(0deg);
+			-moz-transform: rotateY(0deg);
+			-o-transform: rotateY(0deg);
+			-ms-transform: rotateY(0deg);
+			transform: rotateY(0deg);
+			transform-style: preserve-3d;
+		}
+
+		/*Square content*/
+		.square-container{
+			padding:40px;
+			text-align:center;
+			position:relative;
+			top:50%;
+
+			-ms-transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+			    transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+			    -webkit-transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+
+		
+			-webkit-transform: translateY(-50%) translateX(0px)  scale(1);
+			-ms-transform: translateY(-50%) translateX(0px)  scale(1);
+	transform: translateY(-50%) translateX(0px)  scale(1);
+			transform-style: preserve-3d;
+			z-index:2;
+		}
+		.square-flip:hover .square-container{
+			
+			-webkit-transform: translateY(-50%) translateX(-650px)  scale(.88);
+			-ms-transform: translateY(-50%) translateX(-650px)  scale(.88);
+      transform: translateY(-50%) translateX(-650px)  scale(.88);
+			transform-style: preserve-3d;
+
+		}
+
+		.square-container2{
+			padding:40px;
+			text-align:center;
+			position:relative;
+			top:50%;
+
+			-ms-transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+			    transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+			    -webkit-transition: transform 0.60s cubic-bezier(.5,.3,.3,1);
+
+			
+			-webkit-transform: translateY(-50%) translateX(650px) translateZ(60px) scale(.88);
+			-ms-transform: translateY(-50%) translateX(650px) translateZ(60px) scale(.88);
+      transform: translateY(-50%) translateX(650px) translateZ(60px) scale(.88);
+
+			transform-style: preserve-3d;
+			z-index:2;
+		}
+		.square-flip:hover .square-container2{
+			
+			-webkit-transform: translateY(-50%) translateX(0px) translateZ(0px) scale(1);
+			-ms-transform: translateY(-50%) translateX(0px) translateZ(0px) scale(1);
+			transform: translateY(-50%) translateX(0px) translateZ(0px) scale(1);
+      transform-style: preserve-3d;
+		}
+
+
+
+		/*Style text*/
+		.square-flip h2{
+			color:white;
+			font-family: "Open Sans";
+			font-weight:700;
+			font-size:22px;
+		}
+		.square-flip h3{
+			color:white;
+			font-family: "Open Sans";
+			font-weight:500;
+			font-size:16px;
+			line-height:26px;
+		}
+		/*Elements*/
+		.flip-overlay{
+			display:block;
+			background:rgba(0,0,0,0.5);
+			width:100%;
+			height:100%;
+			position:absolute;
+			top:0;
+		}
+		.align-center{
+			margin:0 auto;
+		}
+		.kallyas-button{
+			display:block;
+			width:160px;
+			padding:18px 30px;
+			font-family:"Open Sans";
+			font-weight:600;
+			color:#fff;
+			background:#FF2024;
+			margin:0 auto;
+			border-radius:2px;
+			text-decoration:none;
+
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffa067+0,ff2959+49,ff2024+100 */
+			background: #ffa067; /* Old browsers */
+			background: -moz-linear-gradient(-45deg,  #ffa067 0%, #ff2959 49%, #ff2024 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(-45deg,  #ffa067 0%,#ff2959 49%,#ff2024 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(135deg,  #ffa067 0%,#ff2959 49%,#ff2024 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa067', endColorstr='#ff2024',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+		}
+
+
+		/*ADD SHADOWS OPTIONAL*/
+		.square-flip .square .boxshadow, .square-flip .square .textshadow, .square-flip .square2 .boxshadow, .square-flip .square2 .textshadow{
+			-ms-transition: 0.60s;
+			    transition: 0.60s;
+			    -webkit-transition: 0.60s;
+		}
+
+		.square-flip .square .boxshadow{
+			-webkit-box-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
+			-moz-box-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
+			box-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
+		}
+		.square-flip .square .textshadow{
+			-webkit-text-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
+			-moz-text-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
+			text-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
+		}
+		.square-flip:hover .square .boxshadow, .square-flip:hover .square .textshadow{
+			-webkit-box-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
+			-moz-box-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
+			box-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
+		}
+
+
+		.square-flip .square2 .boxshadow{
+			-webkit-box-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
+			-moz-box-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
+			box-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
+		}
+		.square-flip .square2 .textshadow{
+			-webkit-text-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
+			-moz-text-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
+			text-shadow: 240px 42px 58px -8px rgba(0,0,0,0.0);
+		}
+		.square-flip:hover .square2 .boxshadow, .square-flip:hover .square2 .textshadow{
+			-webkit-box-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
+			-moz-box-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
+			box-shadow: 24px 42px 58px -8px rgba(0,0,0,0.3);
+		}
+
+		
+		/*You can delete this style*/
+		.centerflipcards{
+      display:block;
+			width:1330px;
+      height:440px;
+			text-align:center;
+			margin:0 auto;
+			margin-top:25px;
+		}
+.clearfix{clear:both;}
+.centerflipcards p{
+      font-family:"Open Sans";
+      font-size:13px;
+      margin-top:10px;
+      font-weight:700;
+}
